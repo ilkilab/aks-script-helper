@@ -13,7 +13,7 @@ if [ "${RESOURCE_GROUP}" = "" ];then
         read -p "AKS Resource Group: " RESOURCE_GROUP
 fi
 if [ "${AKS_CLUSTER}" = "" ];then
-        read -sp "AKS Cluster Name: " AKS_CLUSTER
+        read -p "AKS Cluster Name: " AKS_CLUSTER
 fi
 
 CLUSTER_RESOURCE_GROUP=$(az aks show --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --query nodeResourceGroup -o tsv)
